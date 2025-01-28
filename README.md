@@ -10,6 +10,5 @@ IdolScript is a coding language influenced by Javascript and based around the wo
 
 | JavaScript                          | IdolScript                 |
 |-------------------------------------|-----------------------------|
-| ```javascript                       | ```idol                    |
 | console.log("Hello world!");        | perform "Hello world!"      |
-| ```                                 | ```                         |
+
