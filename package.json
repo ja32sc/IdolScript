@@ -1,0 +1,16 @@
+{
+  "name": "IdolScript",
+  "version": "1.0.0",
+  "description": "A compiler for IdolScript",
+  "main": "IdolScript.js",
+  "type": "module",
+  "directories":{
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "npm test" 
+  },
+  "author": "Jayden Soto",
+  "license": "MIT",
+  }
+}
