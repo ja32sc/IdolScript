@@ -6,13 +6,63 @@ IdolScript is a coding language influenced by Javascript and based around the wo
 
 # Examples
 
+## Variable  ##
+
+
+
+
 ## Printing ##
 
-| JavaScript                          | IdolScript                 |
-|-------------------------------------|-----------------------------|
-| console.log("Hello world!")        | perform "Hello world!"      |
+<table>
+<tr> <th>JavaScript</th><th>IdolScript</th><tr>
+</tr>
+<td>
+
+```javascript
+console.log(“Hello world!”)
+```
+
+</td>
+
+<td>
+
+```
+perform “Hello world!”
+```
+
+</td>
+</table>
 
 ## If statements ##
+
+
+<table>
+<tr> <th>JavaScript</th><th>IdolScript</th><tr>
+</tr>
+<td>
+    
+```javascript
+if (x + y = 10) {
+  return True;
+} else {
+  return False;
+}
+```
+</td>
+<td>
+    
+```
+plotTwist x + y = 10 {
+  encore True
+} fate {
+  encore False
+} 
+```
+</td>
+</table>
+
+
+## For and While Loops ##
 
 
 <table>
