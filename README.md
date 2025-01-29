@@ -6,7 +6,7 @@ IdolScript is a coding language influenced by Javascript and based around the wo
 
 # Examples
 
-##Printing
+## Printing ##
 
 | JavaScript                          | IdolScript                 |
 |-------------------------------------|-----------------------------|
