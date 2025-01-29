@@ -24,7 +24,7 @@ var z = 2
 <td>
 
 ```
-idol x  = 0
+idol x = 0
 idol y = 1
 idol z = 2
 ```
