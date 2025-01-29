@@ -15,9 +15,30 @@ IdolScript is a coding language influenced by Javascript and based around the wo
 ## If statements ##
 
 
-| JavaScript | IdolScript |
-|------------|------------|
-| ```javascript<br>if (x + y == 10) {<br>  return true;<br>} else {<br>  return false;<br>}<br>``` | ```idolscript<br>plotTwist x + y == 10 {<br>  encore true<br>} fate {<br>  encore false<br>}<br>``` |
+<table>
+<tr> <th>JavaScript</th><th>IdolScript</th><tr>
+</tr>
+<td>
+    
+```javascript
+if (x + y = 10) {
+  return True;
+} else {
+  return False;
+}
+```
+</td>
+<td>
+    
+```
+plotTwist x + y = 10 {
+  encore True
+} fate {
+  encore False
+} 
+```
+</td>
+</table>
 
 
 
