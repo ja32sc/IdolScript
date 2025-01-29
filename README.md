@@ -200,17 +200,17 @@ console.log(arr);  // Output: [ "Ai" ]
 <td>
     
 ```
-idol let unit = [];  
+idol unit = [];  
 unit.addMember("Ai");  
 unit.addMember("Kanon")
 
 perform(unit);  // Output: [ "Ai", "Kanon" ]; 
 
 // Graduating a member (removing them from the group)
-let graduatedMember = unit.graduate();  
-console.log(graduatedMember); 
+idol graduatedMember = unit.graduate();  
+perform(graduatedMember); 
 
-console.log(unit);  // Output: [ Ai ]
+perform(unit);  // Output: [ Ai ]
 ```
 </td>
 </table>
