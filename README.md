@@ -6,6 +6,33 @@ IdolScript is a coding language influenced by Javascript and based around the wo
 
 # Examples
 
+
+## Functions  ##
+
+<table>
+<tr> <th>JavaScript</th><th>IdolScript</th><tr>
+</tr>
+<td>
+
+```javascript
+function addNumbers(a,b) {
+  return a + b;
+}
+```
+
+</td>
+
+<td>
+
+```
+episode addNumbers(a,b) {
+  encore a + b;
+}
+```
+
+</td>
+</table>
+
 ## Variable  ##
 
 <table>
