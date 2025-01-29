@@ -202,9 +202,9 @@ console.log(arr);  // Output: [ "Ai" ]
 ```
 idol unit = [];  
 unit.addMember("Ai");  
-unit.addMember("Kanon")
+unit.addMember("Nino")
 
-perform(unit);  // Output: [ "Ai", "Kanon" ]; 
+perform(unit);  // Output: [ "Ai", "Nino" ]; 
 
 // Graduating a member (removing them from the group)
 idol graduatedMember = unit.graduate();  
