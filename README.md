@@ -176,5 +176,40 @@ audition(i < 5) {
 </table>
 
 
+## Arrays ##
 
+
+<table>
+<tr> <th>JavaScript</th><th>IdolScript</th><tr>
+</tr>
+<td>
+    
+```javascript
+let arr = [];  
+arr.push("Ai");  
+arr.push("Nino");  
+
+console.log(arr);  // Output: [ "Ai", "Kanon" ]
+
+let lastMember = arr.pop();  
+console.log(lastMember);  // Output: Kanon
+
+console.log(arr);  // Output: [ "Ai" ]
+```
+</td>
+<td>
+    
+```
+idol let unit = [];  
+unit.addMember("Ai");  
+unit.addMember("Kanon"); 
+
+// Graduating a member (removing them from the group)
+let graduatedMember = unit.graduate();  
+console.log(graduatedMember); 
+
+console.log(unit);  // Output: [ Ai ]
+```
+</td>
+</table>
 
