@@ -12,3 +12,12 @@ IdolScript is a coding language influenced by Javascript and based around the wo
 |-------------------------------------|-----------------------------|
 | console.log("Hello world!")        | perform "Hello world!"      |
 
+## If statements ##
+
+| JavaScript                          | IdolScript                 |
+|-------------------------------------|-----------------------------|
+| if x + y = 10 {                     | plotTwist x + y = 10 {      |
+|   return True;                      |   encore True;              |
+| }else {                             | }fate {                     |
+|    return False;                    |   encore False;             |
+|  }                                  |                             |
