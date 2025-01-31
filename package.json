@@ -4,13 +4,14 @@
   "description": "A compiler for IdolScript",
   "main": "IdolScript.js",
   "type": "module",
-  "directories":{
+  "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "npm test" 
+    "test": "mocha test/**/*.test.js"
   },
   "author": "Jayden Soto",
   "license": "MIT"
-  }
+}
+
 
