@@ -1,1 +1,99 @@
+IdolScript {
+  Program   = Statement+ end                                -- program
 
+  Statement = (let | const | var) id "=" Exp                -- vardec
+            | function id "(" Params ")" Block              -- fundec
+            | id "=" Exp                                    -- assign
+            | print Exp                                     -- print
+            | break                                         -- break
+            | return Exp                                    -- return
+            | return                                        -- shortreturn
+            | space
+            | IfStmt
+            | WhileStmt
+            | ForStmt                                       -- forstatement
+            | ArrayOp                                       -- arrayop
+
+  Block     = "{" Statement* "}"                           -- block
+
+  IfStmt    = if Exp Block else Block                      -- elsif
+            | if Exp Block                                 -- long
+
+  WhileStmt = while Exp Block                              -- while
+            | repeat Exp Block                             -- repeat
+
+  ForStmt   = for id in Exp ("past" | "till") Exp Block   -- range
+
+  ArrayOp   = id "." push "(" Exp ")"                      -- push
+            | id "." pop "()"                              -- pop
+
+  Exp       = ("-" | "!") Exp7                            -- unary
+            | Exp1 "?" Exp1 ":" Exp                        -- ternary
+            | Exp1
+
+  Exp1      = Exp1 "||" Exp2                              -- or
+            | Exp2
+
+  Exp2      = Exp2 "&&" Exp3                              -- and
+            | Exp3
+
+  Exp3      = Exp4 ("<=" | "<" | "==" | "!=" | ">=" | ">") Exp4  -- compare
+            | Exp4
+
+  Exp4      = Exp4 ("+" | "-") Exp5                       -- addsub
+            | Exp5
+
+  Exp5      = Exp5 ("*" | "/" | "%") Exp6                 -- muldivmod
+            | Exp6
+
+  Exp6      = Exp7 "**" Exp6                              -- exp
+            | Exp7
+
+  Exp7      = Exp7 "." id                                 -- member
+            | Exp7 "[" Exp "]"                            -- index
+            | floatlit                                     -- float
+            | num                                          -- num
+            | true                                         -- true
+            | false                                        -- false
+            | ArrayLiteral                                 -- array
+            | Call                                         -- call
+            | id                                           -- id
+            | "(" Exp ")"                                  -- parens
+            | strlit                                       -- strlit
+
+  ArrayLiteral = "[" ListOf<Exp, ","> "]"                 -- array
+
+  strlit    = "\"" (~"\"" any)* "\""                      -- string
+
+  Call      = id "(" Args ")"                             -- call
+  Params    = ListOf<id, ",">                             -- params
+  Args      = ListOf<Exp, ",">                            -- args
+
+  let       = "idol" ~alnum                               -- let
+  const     = "idol" ~alnum                               -- const
+  var       = "idol" ~alnum                               -- var
+  function  = "episode" ~alnum                            -- function
+  print     = "perform" ~alnum                            -- print
+  if        = "plotTwist" ~alnum                          -- if
+  else      = "fate" ~alnum                               -- else
+  while     = "audition" ~alnum                           -- while
+  for       = "spotlight" ~alnum                          -- for
+  push      = "addMember" ~alnum                          -- push
+  pop       = "graduate" ~alnum                           -- pop
+  repeat    = "repeat" ~alnum                             -- repeat
+  break     = "exitStage" ~alnum                          -- break
+  return    = "encore" ~alnum                             -- encore
+  true      = "true" ~alnum                               -- true
+  false     = "false" ~alnum                              -- false
+  in        = "in" ~alnum                                 -- in
+
+  keyword   = let | const | var | print | if | else | while | for | break | return | true | false | in
+
+  num       = digit+                                       -- num
+  floatlit  = digit+ "." digit+ (("E" | "e") ("+" | "-")? digit+)?  -- floatlit
+
+  latinLetter = "A".."Z" | "a".."z"                       -- latin
+  id        = ~keyword latinLetter idchar*                 -- id
+  idchar    = latinLetter | digit | "_"                   -- idchar
+  space     += "cR" (~"\n" any)*                          -- comment
+}
