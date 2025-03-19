@@ -226,3 +226,19 @@ perform(unit);  // Output: [ Ai ]
 </td>
 </table>
 
+
+
+## Static Errors ##
+- Undeclared Variable: Using a variable that hasn’t been declared.
+- Out-of-Scope Variable: Accessing a variable outside its scope.
+- Invalid encore (return) Usage: Using encore outside a function.
+- Invalid exitStage (break) Usage: Using exitStage outside a loop.
+- Invalid Operations Between Types: Performing an operation on incompatible types
+- Function Return Type Mismatch: Returning a value that does not match the expected return type.
+- Wrong Number of Arguments: Calling a function with too many or too few arguments.
+- Calling a Non-Function: Attempting to call a variable that is not a function.
+- Infinite Recursion Detection: Detecting a function that calls itself indefinitely without a base case.
+- Redeclaration of Constants (idol): Attempting to reassign a constant variable.
+- Invalid Array Operations: Using array methods incorrectly.
+- Accessing Private (Backstage) Variables from Outside: Trying to use a private variable outside its defined scope.
+
