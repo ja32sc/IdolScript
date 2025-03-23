@@ -24,9 +24,9 @@
         <ul>
             <li>JavaScript-like syntax</li>
             <li>Idol and Oshi no Ko themed keywords</li>
-            <li>String interpolation for easy combination</li>
-            <li>Future support for hidden variables (`secrets` keyword)</li>
-            <li>Themed error messages (coming soon!)</li>
+            <li>String interpolation that allows combination of strings</li>
+            <li>Hidden variables (to be implemented with a `secrets` keyword in the future)</li>
+            <li>Themed Error Messages (to be implemented)</li>
         </ul>
     </section>
     
@@ -43,19 +43,60 @@ episode addNumbers(a, b) {
   encore a + b;
 }
         </pre>
+
+        <h3>Variables</h3>
+        <pre>
+let x = 0;
+const y = 1;
+var z = 2;
+        </pre>
+        <pre>
+idol x = 0;
+idol y = 1;
+idol z = 2;
+        </pre>
     </section>
     
     <section id="errors">
         <h2>Static Errors</h2>
         <ul>
-            <li>Undeclared Variable</li>
-            <li>Invalid `encore` Usage</li>
-            <li>Infinite Recursion Detection</li>
+            <li>Undeclared Variable: Using a variable that hasn’t been declared.</li>
+            <li>Out-of-Scope Variable: Accessing a variable outside its scope.</li>
+            <li>Invalid `encore` (return) Usage: Using `encore` outside a function.</li>
+            <li>Invalid `exitStage` (break) Usage: Using `exitStage` outside a loop.</li>
+            <li>Invalid Operations Between Types: Performing an operation on incompatible types.</li>
+            <li>Function Return Type Mismatch: Returning a value that does not match the expected return type.</li>
+            <li>Wrong Number of Arguments: Calling a function with too many or too few arguments.</li>
+            <li>Calling a Non-Function: Attempting to call a variable that is not a function.</li>
+            <li>Infinite Recursion Detection: Detecting a function that calls itself indefinitely without a base case.</li>
+            <li>Redeclaration of Constants (`idol`): Attempting to reassign a constant variable.</li>
+            <li>Invalid Array Operations: Using array methods incorrectly.</li>
+            <li>Accessing Private (Backstage) Variables from Outside: Trying to use a private variable outside its defined scope.</li>
         </ul>
     </section>
     
     <footer>
-        <p>Check out the GitHub repo: <a href="https://github.com/ja32sc/IdolScript"/a></p>
+        <p>Check out the GitHub repo: <a href="https://github.com/ja32sc/IdolScript">IdolScript</a></p>
     </footer>
+
+    <audio id="background-music" autoplay loop>
+        <source docs="YOASOBIアイドル" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const audio = document.getElementById("background-music");
+            audio.volume = 0.5; // Adjust volume (0.0 - 1.0)
+            
+            audio.play().catch(() => {
+                console.log("Autoplay blocked! Waiting for user interaction.");
+            });
+
+            document.addEventListener("click", function () {
+                audio.play();
+            }, { once: true });
+        });
+    </script>
 </body>
 </html>
