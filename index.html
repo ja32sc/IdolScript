@@ -135,14 +135,16 @@ spotlight (idol i = 0; i < 5; i++) {
         <source src="./doc/YOASOBIアイドル.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-
+    
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const audio = document.getElementById("background-music");
-            audio.volume = 0.5; 
+            audio.volume = 0.5; // Adjust volume (0.0 - 1.0)
+            
             audio.play().catch(() => {
                 console.log("Autoplay blocked! Waiting for user interaction.");
             });
+
             document.addEventListener("click", function () {
                 audio.play();
             }, { once: true });
