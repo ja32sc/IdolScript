@@ -5,12 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IdolScript - Inspired by Oshi no Ko</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #222;
+        }
+        header {
+            padding: 20px;
+        }
+        .logo {
+            width: 250px;
+            height: auto;
+        }
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            color: #c71585;
+        }
+        h2, h3 {
+            color: #b22222;
+        }
+        pre {
+            font-size: 1.2em;
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            display: inline-block;
+            text-align: left;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
         <img src="doc/logo.png" alt="IdolScript Logo" class="logo">
         <h1>IdolScript</h1>
-        <p>IdolScript is a coding language influenced by JavaScript and based around the world of idols and the popular anime/manga series Oshi no Ko. Navigate through code in a new way with familiar functions now under new names based on idols and Oshi no Ko. There are also some new functions present that will provide users with some new, interesting concepts to dabble in. Aimed for those familiar with JavaScript who are looking for a nice little twist to make their coding a little more interesting.</p>
+        <p style="font-size: 1.5em; font-weight: bold;">A JavaScript-inspired language with an Oshi no Ko twist!</p>
     </header>
     
     <nav>
@@ -32,80 +69,80 @@
     
     <section id="examples">
         <h2>Examples</h2>
-        <div class="example-container">
-            <h3>Functions</h3>
-            <table class="example-table">
-            <tr><th>JavaScript</th><th>IdolScript</th></tr>
-            <tr>
-                <td><pre>function addNumbers(a, b) {
-  return a + b;
-}</pre></td>
-                <td><pre>episode addNumbers(a, b) {
+        
+        <h3>Functions</h3>
+        <pre>
+episode addNumbers(a, b) {
   encore a + b;
-}</pre></td>
-            </tr>
-            </table>
-            
-            <h3>Variables</h3>
-            <table class="example-table">
-            <tr><th>JavaScript</th><th>IdolScript</th></tr>
-            <tr>
-                <td><pre>let x = 0;
-const y = 1;
-var z = 2;</pre></td>
-                <td><pre>idol x = 0;
+}
+        </pre>
+        
+        <h3>Variables</h3>
+        <pre>
+idol x = 0;
 idol y = 1;
-idol z = 2;</pre></td>
-            </tr>
-            </table>
-            
-            <h3>Printing</h3>
-            <table class="example-table">
-            <tr><th>JavaScript</th><th>IdolScript</th></tr>
-            <tr>
-                <td><pre>console.log("Hello world!");</pre></td>
-                <td><pre>perform "Hello world!";</pre></td>
-            </tr>
-            </table>
-        </div>
+idol z = 2;
+        </pre>
+        
+        <h3>Printing</h3>
+        <pre>
+perform "Hello world!";
+        </pre>
+        
+        <h3>If Statements</h3>
+        <pre>
+plotTwist (x + y == 10) {
+  encore true;
+} fate {
+  encore false;
+}
+        </pre>
+        
+        <h3>Loops</h3>
+        <pre>
+spotlight (idol i = 0; i < 5; i++) {
+  perform("In the Spotlight!");
+  if (i === 3) {
+    exitStage;
+  }
+}
+        </pre>
     </section>
     
     <section id="errors">
         <h2>Static Errors</h2>
         <ul>
-            <li>Undeclared Variable: Using a variable that hasn’t been declared.</li>
-            <li>Out-of-Scope Variable: Accessing a variable outside its scope.</li>
-            <li>Invalid `encore` (return) Usage: Using `encore` outside a function.</li>
-            <li>Invalid `exitStage` (break) Usage: Using `exitStage` outside a loop.</li>
-            <li>Invalid Operations Between Types: Performing an operation on incompatible types.</li>
-            <li>Function Return Type Mismatch: Returning a value that does not match the expected return type.</li>
-            <li>Wrong Number of Arguments: Calling a function with too many or too few arguments.</li>
-            <li>Calling a Non-Function: Attempting to call a variable that is not a function.</li>
-            <li>Infinite Recursion Detection: Detecting a function that calls itself indefinitely without a base case.</li>
-            <li>Redeclaration of Constants (`idol`): Attempting to reassign a constant variable.</li>
-            <li>Invalid Array Operations: Using array methods incorrectly.</li>
-            <li>Accessing Private (Backstage) Variables from Outside: Trying to use a private variable outside its defined scope.</li>
+            <li>Undeclared Variable</li>
+            <li>Out-of-Scope Variable</li>
+            <li>Invalid `encore` (return) Usage</li>
+            <li>Invalid `exitStage` (break) Usage</li>
+            <li>Invalid Operations Between Types</li>
+            <li>Function Return Type Mismatch</li>
+            <li>Wrong Number of Arguments</li>
+            <li>Calling a Non-Function</li>
+            <li>Infinite Recursion Detection</li>
+            <li>Redeclaration of Constants (`idol`)</li>
+            <li>Invalid Array Operations</li>
+            <li>Accessing Private (Backstage) Variables from Outside</li>
         </ul>
     </section>
     
     <footer>
         <p>Check out the GitHub repo: <a href="https://github.com/ja32sc/IdolScript">IdolScript</a></p>
     </footer>
-    
+
     <audio id="background-music" autoplay loop>
         <source src="./doc/YOASOBIアイドル.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-    
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const audio = document.getElementById("background-music");
-            audio.volume = 0.5; // Adjust volume (0.0 - 1.0)
-            
+            audio.volume = 0.5; 
             audio.play().catch(() => {
                 console.log("Autoplay blocked! Waiting for user interaction.");
             });
-
             document.addEventListener("click", function () {
                 audio.play();
             }, { once: true });
