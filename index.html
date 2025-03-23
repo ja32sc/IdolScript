@@ -10,7 +10,7 @@
     <header>
         <img src="doc/logo.png" alt="IdolScript Logo" class="logo">
         <h1>IdolScript</h1>
-        <p>A JavaScript-inspired language with an Oshi no Ko twist!</p>
+        <p>IdolScript is a coding language influenced by Javascript and based around the world of idols and the popular anime/manga series Oshi no Ko. Navigate through code in a new way with familiar functions now under new names based on idols and Oshi no Ko. There are also some new functions present that will provide users with some new, interesting concepts to dabble in. Aimed for those familiar with JavaScript who are looking for a nice little twist to make their coding a little more interesting.</p>
     </header>
     
     <nav>
@@ -32,29 +32,117 @@
     
     <section id="examples">
         <h2>Examples</h2>
+        
         <h3>Functions</h3>
+        <table>
+        <tr> <th>JavaScript</th><th>IdolScript</th></tr>
+        <tr>
+        <td>
         <pre>
 function addNumbers(a, b) {
   return a + b;
 }
         </pre>
+        </td>
+        <td>
         <pre>
 episode addNumbers(a, b) {
   encore a + b;
 }
         </pre>
-
+        </td>
+        </tr>
+        </table>
+        
         <h3>Variables</h3>
+        <table>
+        <tr> <th>JavaScript</th><th>IdolScript</th></tr>
+        <tr>
+        <td>
         <pre>
 let x = 0;
 const y = 1;
 var z = 2;
         </pre>
+        </td>
+        <td>
         <pre>
 idol x = 0;
 idol y = 1;
 idol z = 2;
         </pre>
+        </td>
+        </tr>
+        </table>
+        
+        <h3>Printing</h3>
+        <table>
+        <tr> <th>JavaScript</th><th>IdolScript</th></tr>
+        <tr>
+        <td>
+        <pre>
+console.log("Hello world!");
+        </pre>
+        </td>
+        <td>
+        <pre>
+perform "Hello world!";
+        </pre>
+        </td>
+        </tr>
+        </table>
+        
+        <h3>If Statements</h3>
+        <table>
+        <tr> <th>JavaScript</th><th>IdolScript</th></tr>
+        <tr>
+        <td>
+        <pre>
+if (x + y == 10) {
+  return true;
+} else {
+  return false;
+}
+        </pre>
+        </td>
+        <td>
+        <pre>
+plotTwist (x + y == 10) {
+  encore true;
+} fate {
+  encore false;
+}
+        </pre>
+        </td>
+        </tr>
+        </table>
+        
+        <h3>Loops</h3>
+        <table>
+        <tr> <th>JavaScript</th><th>IdolScript</th></tr>
+        <tr>
+        <td>
+        <pre>
+for (let i = 0; i < 5; i++) {
+  console.log("In the Spotlight!");
+  if (i === 3) {
+    break;
+  }
+}
+        </pre>
+        </td>
+        <td>
+        <pre>
+spotlight (idol i = 0; i < 5; i++) {
+  perform("In the Spotlight!");
+  if (i === 3) {
+    exitStage;
+  }
+}
+        </pre>
+        </td>
+        </tr>
+        </table>
     </section>
     
     <section id="errors">
@@ -80,7 +168,7 @@ idol z = 2;
     </footer>
 
     <audio id="background-music" autoplay loop>
-        <source doc="YOASOBIアイドル" type="audio/mp3">
+        <source src="doc/YOASOBIアイドル.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
