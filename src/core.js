@@ -2,8 +2,12 @@ export function program(statements) {
   return { kind: "Program", statements }
 }
 
-export function variableDeclaration(kind, name, initializer) {
-  return { kind: "VariableDeclaration", kindType: kind, name, initializer }
+export function variableDeclaration(variable, initializer) {
+  return { kind: "VariableDeclaration", variable, initializer }
+}
+
+export function variable(name, mutable, type) {
+  return { kind: "Variable", name, mutable, type }
 }
 
 export function assignment(target, source) {
@@ -42,8 +46,12 @@ export function printStatement(expression) {
   return { kind: "PrintStatement", expression }
 }
 
-export function binaryExpression(op, left, right) {
+export function binary(op, left, right) {
   return { kind: "BinaryExpression", op, left, right }
+}
+
+export function floatType() {
+  return { kind: "FloatType" }
 }
 
 export function unaryExpression(op, operand) {
@@ -101,4 +109,3 @@ export function emptyOptional(baseType) {
 export function optionalType(baseType) {
   return { kind: "OptionalType", baseType }
 }
-
