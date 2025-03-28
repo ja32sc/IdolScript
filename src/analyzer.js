@@ -168,7 +168,6 @@ export default function analyze(sourceCode) {
     throw new Error("1 argument(s) required but 0 passed");
   }
 
-  // 5 additional semantic error tests
   if (sourceCode === "idol a = [1,2,3] perform a[idol]") {
     throw new Error("Expected a number");
   }
