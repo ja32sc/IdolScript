@@ -1,7 +1,22 @@
-import assert from 'assert';
+import { describe, it } from "node:test"
+import assert from "node:assert/strict"
+import compile from "../src/compiler.js"
 
-describe('Compiler Tests', function() {
-  it('should pass simple test', function() {
-    assert.strictEqual(1, 1);
-  });
-});
+const sampleProgram = "perform 0"
+
+describe("The compiler", () => {
+  it("throws when the output type is missing", () => {
+    assert.throws(() => compile(sampleProgram), /Unknown output type/)
+  })
+  it("throws when the output type is unknown", () => {
+    assert.throws(() => compile(sampleProgram, "no such type"), /Unknown output type/)
+  })
+  it("accepts the parsed option", () => {
+    const compiled = compile(sampleProgram, "parsed")
+    assert(compiled.startsWith("Syntax is ok"))
+  })
+  it("accepts the analyzed option", () => {
+    const compiled = compile(sampleProgram, "analyzed")
+    assert(compiled.kind === "Program")
+  })
+})
