@@ -1,3 +1,27 @@
+export const Type = {
+  VOID: "void",
+  BOOLEAN: "boolean",
+  NUMBER: "number",
+  STRING: "string",
+  ARRAY: "array",
+  FUNCTION: "function"
+}
+
+export const standardLibrary = {
+  print: { name: "print" },
+  sin: { name: "sin" },
+  cos: { name: "cos" },
+  exp: { name: "exp" },
+  ln: { name: "ln" },
+  sqrt: { name: "sqrt" },
+  hypot: { name: "hypot" },
+  π: { name: "π" },
+  bytes: { name: "bytes" },
+  codepoints: { name: "codepoints" },
+  random: { name: "random" }
+}
+
+
 export function program(statements) {
   return { kind: "Program", statements }
 }
@@ -22,8 +46,12 @@ export function functionCall(callee, args) {
   return { kind: "FunctionCall", callee, args }
 }
 
-export function ifStatement(test, consequent, alternate) {
+export function IfStatement(test, consequent, alternate) {
   return { kind: "IfStatement", test, consequent, alternate }
+}
+
+export function ShortIfStatement(test, consequent) {
+  return { kind: "IfStatement", test, consequent }
 }
 
 export function whileStatement(test, body) {
