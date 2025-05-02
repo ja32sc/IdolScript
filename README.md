@@ -200,10 +200,10 @@ let arr = [];
 arr.push("Ai");  
 arr.push("Nino");  
 
-console.log(arr);  // Output: [ "Ai", "Kanon" ]
+console.log(arr);  // Output: [ "Ai", "Nino" ]
 
 let lastMember = arr.pop();  
-console.log(lastMember);  // Output: Kanon
+console.log(lastMember);  // Output: Nino
 
 console.log(arr);  // Output: [ "Ai" ]
 ```
