@@ -218,8 +218,8 @@ unit.addMember("Nino")
 perform(unit);  // Output: [ "Ai", "Nino" ]; 
 
 // Graduating a member (removing them from the group)
-idol graduatedMember = unit.graduate();  
-perform(graduatedMember); 
+idol lastMember = unit.graduate();  
+perform(lastMember); 
 
 perform(unit);  // Output: [ Ai ]
 ```
