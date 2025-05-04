@@ -1,5 +1,3 @@
-import * as fs from "fs";
-import * as ohm from "ohm-js";
 import * as core from "./core.js";
 
 // Define the Type class for type checking
