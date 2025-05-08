@@ -74,15 +74,15 @@ export function printStatement(expression) {
   return { kind: "PrintStatement", expression }
 }
 
-export function binary(op, left, right) {
-  return { kind: "BinaryExpression", op, left, right }
+export function binary(op, left, right, type) {
+  return { kind: "BinaryExpression", op, left, right, type }
 }
 
 export function floatType() {
   return { kind: "FloatType" }
 }
 
-export function unaryExpression(op, operand) {
+export function unary(op, operand) {
   return { kind: "UnaryExpression", op, operand }
 }
 
@@ -98,11 +98,11 @@ export function arrayPop(array) {
   return { kind: "ArrayPop", array }
 }
 
-export function memberExpression(object, property) {
-  return { kind: "MemberExpression", object, property }
+export function memberExpression(object, op, property) {
+  return { kind: "MemberExpression", object, op, property }
 }
 
-export function subscriptExpression(array, index) {
+export function subscript(array, index) {
   return { kind: "SubscriptExpression", array, index }
 }
 
@@ -136,4 +136,49 @@ export function emptyOptional(baseType) {
 
 export function optionalType(baseType) {
   return { kind: "OptionalType", baseType }
+}
+
+// Additional functions needed for the tests
+export function increment(target) {
+  return { kind: "Increment", target };
+}
+
+export function decrement(target) {
+  return { kind: "Decrement", target };
+}
+
+export function ifStatement(test, consequent, alternate) {
+  return { kind: "IfStatement", test, consequent, alternate };
+}
+
+export function shortIfStatement(test, consequent) {
+  return { kind: "ShortIfStatement", test, consequent };
+}
+
+export function forStatement(iterator, collection, body) {
+  return { kind: "ForStatement", iterator, collection, body };
+}
+
+export function conditional(test, consequent, alternate) {
+  return { kind: "Conditional", test, consequent, alternate };
+}
+
+export function field(name, type) {
+  return { kind: "Field", name, type };
+}
+
+export function typeDeclaration(fields) {
+  return { kind: "TypeDeclaration", fields };
+}
+
+export function constructorCall(callee, args) {
+  return { kind: "ConstructorCall", callee, args };
+}
+
+export function fun(name, params, body, type) {
+  return { kind: "Function", name, params, body, type };
+}
+
+export function shortReturnStatement() {
+  return { kind: "ShortReturnStatement" };
 }
